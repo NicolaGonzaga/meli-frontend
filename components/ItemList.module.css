@@ -1,0 +1,57 @@
+.itemContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 16px auto;
+  background-color: #ffffff;
+}
+
+/* .container {
+    flex-wrap: wrap; /* Allow items to wrap onto multiple lines */
+/* justify-content: space-between; Evenly distribute items horizontally */
+/* } */
+
+.itemList {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.hr {
+  border: none;
+  border-top: 1px solid var(--background-gray);
+  width: 95%;
+}
+
+.item {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  /* padding: 16px; */
+  text-align: left;
+}
+
+.itemDetails {
+  color: red;
+}
+
+.image {
+  object-fit: cover;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+/* .item p {
+  margin: 5px 0; /* Add some spacing between text elements */
+/* }  */
+
+.itemPrice {
+  font-size: 24px;
+  color: #333;
+}
+
+.itemTitle {
+  color: #666;
+  font-size: 18px;
+}
