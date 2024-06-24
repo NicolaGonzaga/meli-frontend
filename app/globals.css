@@ -1,0 +1,27 @@
+:root {
+  --background-white: #ffffff;
+  --background-gray: #eeeeee;
+  --color-header: #ffe600;
+  --text-dark: #333333;
+  --text-gray: #999999;
+  --text-gray-dark: #666666;
+  --background-button: #3483fa;
+  --button-hover: #296dce;
+  --rem: 16px;
+}
+
+html,
+body {
+  font-family: Inter, system-ui, Avenir, Helvetica, Arial, sans-serif;
+  line-height: 1.5;
+  font-weight: 400;
+  margin: 0 auto;
+  min-height: 100vh;
+  place-items: center;
+  background-color: var(--background-gray);
+}
+
+h1 {
+  font-size: 3.2em;
+  line-height: 1.1;
+}
