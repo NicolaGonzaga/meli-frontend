@@ -3,12 +3,10 @@
 import { useParams, useRouter } from "next/navigation";
 import { useFetch } from "../../../hooks/useFetch";
 import { ItemDetails } from "../../../types";
-import styles from "../../../components/ItemDetail.module.css";
-import Image from "next/image";
-import { formatPrice } from "../../../utils/formatPrice";
-import Breadcrumb from "@/components/Breadcrumb";
+import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
+import Header from "@/components/Header/Header";
 import "../../globals.css";
-import Header from "@/components/Header";
+import ProductDetail from "@/components/ProductDetail/ProductDetail";
 
 const ItemDetail = () => {
   const params = useParams();
@@ -24,27 +22,22 @@ const ItemDetail = () => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Carregando...</div>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className="error">Erro: {error}</div>;
+  }
+
+  if (!data?.item) {
+    return <div className="error">Item não encontrado</div>;
   }
 
   return (
-    <div className={styles.itemDetailContainer}>
+    <div>
       <Header onSearch={handleSearch} />
       <Breadcrumb categories={data?.item.categories || []} />
-      <h1>{data?.item.title}</h1>
-      <Image
-        width={300}
-        height={300}
-        src={data?.item.picture_url || ""}
-        alt={data?.item.title || "Item image"}
-      />
-      {data?.item.price && <p>Price: {formatPrice(data?.item.price)}</p>}
-      <p>Condition: {data?.item.condition}</p>
-      <p>Description: {data?.item.description}</p>
+      <ProductDetail item={data?.item} />
     </div>
   );
 };
