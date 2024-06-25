@@ -23,17 +23,43 @@
   display: flex;
   flex-direction: column;
   justify-content: flex-start;
-  margin-left: 16px;
+  padding: 0 32px;
+  width: 30%;
 }
 
-.productInfo h3 {
+.productCondition {
+  font-size: 14px;
+}
+
+.productTitle {
   font-size: 24px;
+  margin: 0;
+}
+
+.productPrice {
+  font-size: 46px;
+  margin: 0;
+  padding: 32px 0;
 }
 
 .productDescription {
+  width: 70%;
   padding: 32px;
 }
 
-.productDescription p {
-  padding: 32px;
+.titleDescription {
+  padding: 32px 0;
+  margin: 0;
+  font-size: 28px;
+  color: var(--text-gray-dark);
+}
+
+.paragraphDescription {
+  margin: 0;
+  font-size: 16px;
+  color: var(--text-gray);
+}
+
+.productButton {
+  padding: 0 0 32px 0;
 }

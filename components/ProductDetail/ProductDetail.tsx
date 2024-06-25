@@ -10,27 +10,44 @@ interface ProductDetailProps {
 }
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ item }) => {
+  const translateCondition = (condition: string) => {
+    switch (condition.toLowerCase()) {
+      case "new":
+        return "Novo";
+      case "used":
+        return "Usado";
+      default:
+        return condition;
+    }
+  };
+
   return (
     <div className={styles.productContainer}>
       <div className={styles.productDetail}>
         <div className={styles.productImage}>
           <Image
             width={680}
-            height={600}
+            height={680}
             src={item.picture_url || ""}
             alt={item.title || "Item image"}
           />
         </div>
         <div className={styles.productInfo}>
-          <p>{item.condition}</p>
-          <h3>{item.title}</h3>
-          {item.price && <p>{formatPrice(item.price)}</p>}
-          <Button label="Comprar" />
+          <p className={styles.productCondition}>
+            {translateCondition(item.condition)}
+          </p>
+          <h3 className={styles.productTitle}>{item.title}</h3>
+          {item.price && (
+            <p className={styles.productPrice}>{formatPrice(item.price)}</p>
+          )}
+          <div className={styles.productButton}>
+            <Button label="Comprar" />
+          </div>
         </div>
       </div>
       <div className={styles.productDescription}>
-        <h2>Descrição do produto </h2>
-        <p>{item.description}</p>
+        <p className={styles.titleDescription}>Descrição do produto </p>
+        <p className={styles.paragraphDescription}>{item.description}</p>
       </div>
     </div>
   );
