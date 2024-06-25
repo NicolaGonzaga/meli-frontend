@@ -6,7 +6,6 @@
   font-size: 16px;
   cursor: pointer;
   border-radius: 4px;
-  margin-top: 8px;
   border: none;
   transition: var(--background-gray) 0.3s;
 }
