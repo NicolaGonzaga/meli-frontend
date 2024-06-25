@@ -6,7 +6,8 @@ import { SearchResponse } from "../../types";
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import Header from "@/components/Header/Header";
 import List from "@/components/List/List";
-import "../globals.css";
+import Loading from "@/components/Loading/Loading";
+import ErrorLoading from "@/components/ErrorLoading/ErrorLoading";
 
 const ItemsPage = () => {
   const searchParams = useSearchParams();
@@ -22,11 +23,15 @@ const ItemsPage = () => {
   };
 
   if (loading) {
-    return <div className="loading">Carregando...</div>;
+    return <Loading />;
   }
 
   if (error) {
-    return <div className="error">Erro: {error}</div>;
+    return <ErrorLoading message={error} />;
+  }
+
+  if (!data?.items) {
+    return <ErrorLoading message="Item não encontrado" />;
   }
 
   return (

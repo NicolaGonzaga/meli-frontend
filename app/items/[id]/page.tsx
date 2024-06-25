@@ -5,8 +5,9 @@ import { useFetch } from "../../../hooks/useFetch";
 import { ItemDetails } from "../../../types";
 import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
 import Header from "@/components/Header/Header";
-import "../../globals.css";
 import ProductDetail from "@/components/ProductDetail/ProductDetail";
+import Loading from "@/components/Loading/Loading";
+import ErrorLoading from "@/components/ErrorLoading/ErrorLoading";
 
 const ItemDetail = () => {
   const params = useParams();
@@ -22,15 +23,15 @@ const ItemDetail = () => {
   };
 
   if (loading) {
-    return <div className="loading">Carregando...</div>;
+    return <Loading />;
   }
 
   if (error) {
-    return <div className="error">Erro: {error}</div>;
+    return <ErrorLoading message={error} />;
   }
 
   if (!data?.item) {
-    return <div className="error">Item não encontrado</div>;
+    return <ErrorLoading message="Item não encontrado" />;
   }
 
   return (
