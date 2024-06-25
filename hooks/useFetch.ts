@@ -12,7 +12,7 @@ export const useFetch = <T>(url: string) => {
       try {
         const response = await fetch(url);
         if (!response.ok) {
-          throw new Error("Network response was not ok");
+          throw new Error("A resposta do servidor não foi bem-sucedida.");
         }
         const result = await response.json();
         setData(result);
