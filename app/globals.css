@@ -7,6 +7,9 @@
   --text-gray-dark: #666666;
   --background-button: #3483fa;
   --button-hover: #296dce;
+  --text-green: #138236;
+  --text-error: #cc0000;
+
   --rem: 16px;
 }
 
@@ -24,4 +27,18 @@ body {
 h1 {
   font-size: 3.2em;
   line-height: 1.1;
+}
+
+.loading,
+.error {
+  margin: 16px auto;
+  padding: 16px;
+  text-align: center;
+  max-width: 1200px;
+  border-radius: 4px;
+  color: var(--text-dark);
+}
+
+.error {
+  color: var(--text-error);
 }
