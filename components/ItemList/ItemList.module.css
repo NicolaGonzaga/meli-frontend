@@ -1,0 +1,50 @@
+.shippingError {
+  color: var(--text-green);
+}
+
+.itemContainer {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  text-align: left;
+}
+
+.image {
+  object-fit: cover;
+  padding: 16px;
+  border-radius: 4px;
+}
+
+.itemList {
+  display: flex;
+  flex-direction: column;
+}
+
+.itemDetails {
+  display: flex;
+  flex-direction: row;
+  align-items: baseline;
+}
+
+.itemPrice {
+  font-size: 24px;
+  color: var(--text-dark);
+  margin: 0 12px 32px 0;
+}
+
+.itemTitle {
+  display: flex;
+  flex-direction: row;
+  width: 90%;
+  color: var(--text-gray-dark);
+  font-size: 18px;
+  margin: 0;
+}
+
+.itemText {
+  display: flex;
+  flex: row;
+  color: var(--text-gray);
+  font-size: 12px;
+  transform: translateY(-90%);
+}
