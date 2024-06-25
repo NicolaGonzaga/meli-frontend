@@ -19,7 +19,7 @@ export default async function handler(
     );
 
     if (!response.ok) {
-      throw new Error("Network response was not ok");
+      throw new Error("A resposta do servidor não foi bem-sucedida.");
     }
 
     const data: RawResponse = await response.json();
