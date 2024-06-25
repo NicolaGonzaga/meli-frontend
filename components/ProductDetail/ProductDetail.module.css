@@ -1,0 +1,39 @@
+.productContainer {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1200px;
+  margin: 16px auto;
+  background-color: var(--background-white);
+  /* flex-wrap: wrap; Allow items to wrap onto multiple lines */
+}
+.productDetail {
+  display: flex;
+  padding: 32px;
+  justify-content: space-between;
+  margin-bottom: 16px;
+}
+
+.productImage {
+  flex: 1;
+}
+
+.productInfo {
+  flex: 2;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  margin-left: 16px;
+}
+
+.productInfo h3 {
+  font-size: 24px;
+}
+
+.productDescription {
+  padding: 32px;
+}
+
+.productDescription p {
+  padding: 32px;
+}
