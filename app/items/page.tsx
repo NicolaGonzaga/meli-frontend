@@ -3,9 +3,9 @@
 import { useSearchParams, useRouter } from "next/navigation";
 import { useFetch } from "../../hooks/useFetch";
 import { SearchResponse } from "../../types";
-import Breadcrumb from "@/components/Breadcrumb";
-import Header from "@/components/Header";
-import ItemList from "@/components/ItemList";
+import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
+import Header from "@/components/Header/Header";
+import List from "@/components/List/List";
 import "../globals.css";
 
 const ItemsPage = () => {
@@ -22,18 +22,18 @@ const ItemsPage = () => {
   };
 
   if (loading) {
-    return <div>Loading...</div>;
+    return <div className="loading">Carregando...</div>;
   }
 
   if (error) {
-    return <div>Error: {error}</div>;
+    return <div className="error">Erro: {error}</div>;
   }
 
   return (
     <div>
       <Header onSearch={handleSearch} />
       <Breadcrumb categories={data?.categories || []} />
-      <ItemList items={data?.items || []} />
+      <List items={data?.items || []} />
     </div>
   );
 };
