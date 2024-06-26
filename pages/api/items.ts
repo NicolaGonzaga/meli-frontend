@@ -13,7 +13,7 @@ export default async function handler(
 
   try {
     const response = await fetch(
-      `https://api.mercadolibre.com/sites/MLB/search?limit=4&q=${encodeURIComponent(
+      `https://api.mercadolibre.com/sites/MLB/search?&q=${encodeURIComponent(
         search
       )}`
     );
