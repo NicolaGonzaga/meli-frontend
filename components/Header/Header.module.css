@@ -7,8 +7,3 @@
   background: var(--color-header);
   align-items: center;
 }
-
-.logo {
-  width: auto;
-  height: 32px;
-}

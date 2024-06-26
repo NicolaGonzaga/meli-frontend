@@ -1,8 +1,7 @@
 .listContainer {
   display: flex;
   flex-direction: column;
-  width: 100%;
-  max-width: 1200px;
+  width: 60%;
   margin: 16px auto;
   background-color: var(--background-white);
   /* flex-wrap: wrap; Allow items to wrap onto multiple lines */
