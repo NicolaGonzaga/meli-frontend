@@ -1,3 +1,5 @@
+"use client";
+
 import React from "react";
 import Search from "../Search/Search";
 import logo from "../../public/logo.png";
@@ -10,8 +12,8 @@ interface HeaderProps {
 
 const Header: React.FC<HeaderProps> = ({ onSearch }) => {
   return (
-    <header className={styles.headerContainer}>
-      <Image src={logo} alt="Logotipo Mercado Livre" className={styles.logo} />
+    <header data-testid="header" className={styles.headerContainer}>
+      <Image src={logo} alt="Logotipo Mercado Livre" width={50} height={32} />
       <Search onSearch={onSearch} />
     </header>
   );

@@ -27,6 +27,7 @@ const ItemList: React.FC<ItemListProps> = ({ item }) => {
             src={item.picture_url}
             alt={item.title}
             onError={handleImageError}
+            data-testid="img"
           />
         </Link>
         <div className={styles.itemList}>

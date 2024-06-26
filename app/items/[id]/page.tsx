@@ -3,11 +3,12 @@
 import { useParams, useRouter } from "next/navigation";
 import { useFetch } from "../../../hooks/useFetch";
 import { ItemDetails } from "../../../types";
-import Breadcrumb from "@/components/Breadcrumb/Breadcrumb";
-import Header from "@/components/Header/Header";
-import ProductDetail from "@/components/ProductDetail/ProductDetail";
-import Loading from "@/components/Loading/Loading";
-import ErrorLoading from "@/components/ErrorLoading/ErrorLoading";
+import Breadcrumb from "../../../components/Breadcrumb/Breadcrumb";
+import Header from "../../../components/Header/Header";
+import ProductDetail from "../../../components/ProductDetail/ProductDetail";
+import Loading from "../../../components/Loading/Loading";
+import ErrorLoading from "../../../components/ErrorLoading/ErrorLoading";
+import "../../globals.css";
 
 const ItemDetail = () => {
   const params = useParams();

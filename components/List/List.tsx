@@ -1,3 +1,4 @@
+"use client";
 import React from "react";
 import { Item } from "../../types";
 import styles from "./List.module.css";
@@ -9,7 +10,7 @@ interface ListProps {
 
 const List: React.FC<ListProps> = ({ items }) => {
   return (
-    <div className={styles.listContainer}>
+    <div id="list" className={styles.listContainer}>
       <ul className={styles.listItem}>
         {items.map((item, index) => (
           <React.Fragment key={item.id}>

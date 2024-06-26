@@ -7,7 +7,7 @@ interface BreadcrumbProps {
 
 const Breadcrumb: React.FC<BreadcrumbProps> = ({ categories }) => {
   return (
-    <nav className={styles.breadContainer}>
+    <nav data-testid="breadcrumb" className={styles.breadContainer}>
       {categories.map((category, index) => (
         <span key={index}>
           {category}
