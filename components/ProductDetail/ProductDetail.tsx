@@ -10,8 +10,8 @@ interface ProductDetailProps {
 }
 
 const ProductDetail: React.FC<ProductDetailProps> = ({ item }) => {
-  const translateCondition = (condition: string) => {
-    switch (condition.toLowerCase()) {
+  const translateCondition = (condition: string | undefined) => {
+    switch (condition?.toLowerCase()) {
       case "new":
         return "Novo";
       case "used":
@@ -22,10 +22,11 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ item }) => {
   };
 
   return (
-    <div className={styles.productContainer}>
+    <div data-testid="product-detail" className={styles.productContainer}>
       <div className={styles.productDetail}>
         <div className={styles.productImage}>
           <Image
+            layout="intrinsic"
             width={680}
             height={680}
             src={item.picture_url || ""}
@@ -40,9 +41,7 @@ const ProductDetail: React.FC<ProductDetailProps> = ({ item }) => {
           {item.price && (
             <p className={styles.productPrice}>{formatPrice(item.price)}</p>
           )}
-          <div className={styles.productButton}>
-            <Button label="Comprar" />
-          </div>
+          <Button label="Comprar" />
         </div>
       </div>
       <div className={styles.productDescription}>
