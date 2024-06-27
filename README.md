@@ -93,3 +93,7 @@ Para configurar Vitest e React Testing Library no projeto, siga os passos abaixo
 3. **Para testar:**
 
    *npm run test*
+
+4. **Para acessar o projeto usando o link da Vercel clique [aqui](https://meli-frontend-seven.vercel.app/).**
+   
+   
