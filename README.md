@@ -16,7 +16,7 @@ Este repositório contém a solução para o desafio técnico proposto para a va
 
 ## Estrutura do Projeto
 
-Os componentes estão na pasta components, e nela unifiquei os testes para simplificar a chamada dos módulos. 
+Os componentes primordiais de interface do projeto estão na pasta components, e nela unifiquei os testes para simplificar a chamada dos módulos. A pasta ./pages é a página que o NextJS usa para montar o sistema de roteamento.
 
 Optei por utilizar CSS Modules, uma funcionalidade nativa do Next.js que permite a criação de estilos de forma modular e local, evitando conflitos de nome de classe e facilitando a manutenção do código.
 
