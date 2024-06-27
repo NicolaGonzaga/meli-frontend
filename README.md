@@ -82,18 +82,24 @@ A combinação de Vitest e React Testing Library oferece uma série de vantagens
 
 Para configurar Vitest e React Testing Library no projeto, siga os passos abaixo:
 
-1. **Instalação das Dependências:**
 
-   *npm i*
-
-2. **Para rodar:**
-
-   *npm run dev*
-
-3. **Para testar:**
-
-   *npm run test*
-
+1. Instalação das Dependências:
+```
+   npm i
+```
+2. Para rodar:
+```
+   npm run dev
+```
+3. Para testar:
+```
+   npm run test
+```
 4. **Para acessar o projeto usando o link da Vercel clique [aqui](https://meli-frontend-seven.vercel.app/).**
+
+
+### Melhorias para fazer:
+
+Implementar cobertura de testes no BFF. Trabalho em andamento na [branch](https://github.com/NicolaGonzaga/meli-frontend/tree/bff-tests)
    
    
