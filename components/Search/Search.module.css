@@ -22,17 +22,31 @@
   background-color: var(--background-gray);
   cursor: pointer;
   border-radius: 0 0.125rem 0.125rem 0;
-  color: var(--text-gray-dark);
   width: auto;
   padding: 0.5rem;
+}
+
+.searchImg {
+  display: flex;
 }
 
 @media (max-width: 768px) {
   .searchContainer {
     width: 100%;
+    display: flex;
+    align-items: stretch;
+    flex-direction: column;
+    gap: 10px;
   }
   .searchInput {
     width: auto;
     margin: 0;
+  }
+  .searchImg {
+    display: flex;
+    background-color: var(--background-gray);
+    width: 100%;
+    align-items: stretch;
+    justify-content: center;
   }
 }

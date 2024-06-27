@@ -31,14 +31,16 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
         placeholder="Buscar produtos"
         data-testid="search-input"
       />
-      <Image
-        className={styles.searchIcon}
-        src={search}
-        alt="Lupa para pesquisa"
-        width={20}
-        height={20}
-        onClick={handleSearch}
-      />
+      <div className={styles.searchImg}>
+        <Image
+          className={styles.searchIcon}
+          src={search}
+          alt="Lupa para pesquisa"
+          width={20}
+          height={20}
+          onClick={handleSearch}
+        />
+      </div>
     </form>
   );
 };
