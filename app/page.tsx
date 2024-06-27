@@ -29,7 +29,6 @@ const Home: React.FC = () => {
     <>
       <div className={styles.main}>
         <Header onSearch={handleSearch} />
-        <h1>Home</h1>
       </div>
     </>
   );
