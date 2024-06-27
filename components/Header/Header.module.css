@@ -7,3 +7,10 @@
   background: var(--color-header);
   align-items: center;
 }
+
+@media (max-width: 768px) {
+  .headerContainer {
+    flex-direction: column;
+    gap: 0.25rem;
+  }
+}

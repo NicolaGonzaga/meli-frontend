@@ -49,3 +49,14 @@
   transform: translateY(-90%);
   margin-bottom: 2rem;
 }
+
+@media (max-width: 768px) {
+  .itemContainer {
+    padding: 1.25rem;
+    flex-direction: column;
+    align-items: center;
+  }
+  .itemList {
+    align-items: center;
+  }
+}

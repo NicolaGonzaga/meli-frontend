@@ -4,7 +4,6 @@
   width: 60%;
   margin: 1rem auto;
   background-color: var(--background-white);
-  /* flex-wrap: wrap; Allow items to wrap onto multiple lines */
 }
 
 .productDetail {
@@ -61,4 +60,18 @@
   margin: 0;
   font-size: 1rem;
   color: var(--text-gray);
+}
+
+@media (max-width: 768px) {
+  .productContainer {
+    align-items: center;
+    padding: 1rem;
+  }
+  .productDetail {
+    flex: auto;
+    flex-wrap: wrap;
+  }
+  .productInfo {
+    flex: auto;
+  }
 }

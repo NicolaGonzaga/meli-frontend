@@ -4,3 +4,11 @@
   margin: 1rem auto;
   color: var(--text-gray);
 }
+
+@media (max-width: 768px) {
+  .breadContainer {
+    display: flex;
+    flex-flow: wrap;
+    justify-content: center;
+  }
+}
