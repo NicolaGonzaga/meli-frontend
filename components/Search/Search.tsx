@@ -22,20 +22,22 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
   };
 
   return (
-    <form className={styles.searchForm} onSubmit={handleSearch}>
-      <div className={styles.searchContainer}>
-        <input
-          className={styles.searchInput}
-          type="text"
-          value={searchTerm}
-          onChange={(e) => setSearchTerm(e.target.value)}
-          placeholder="Buscar produtos"
-          data-testid="search-input"
-        />
-        <div className={styles.searchIcon} onClick={handleSearch}>
-          <Image src={search} alt="Lupa para pesquisa" width={16} height={16} />
-        </div>
-      </div>
+    <form className={styles.searchContainer} onSubmit={handleSearch}>
+      <input
+        className={styles.searchInput}
+        type="text"
+        value={searchTerm}
+        onChange={(e) => setSearchTerm(e.target.value)}
+        placeholder="Buscar produtos"
+        data-testid="search-input"
+      />
+      <Image
+        className={styles.searchIcon}
+        src={search}
+        alt="Lupa para pesquisa"
+        width={20}
+        height={20}
+      />
     </form>
   );
 };
