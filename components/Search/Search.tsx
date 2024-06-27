@@ -37,6 +37,7 @@ const Search: React.FC<SearchProps> = ({ onSearch }) => {
         alt="Lupa para pesquisa"
         width={20}
         height={20}
+        onClick={handleSearch}
       />
     </form>
   );
