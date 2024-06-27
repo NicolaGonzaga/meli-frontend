@@ -1,4 +1,13 @@
+/**
+ * Componente que renderiza a página de itens com Suspense para lidar com o carregamento assíncrono dos dados.
+ *
+ * Este componente envolve ItemsPage com Suspense, mostrando um indicador de carregamento enquanto os dados estão sendo buscados.
+ *
+ * Componente React que renderiza ItemsPage dentro de um Suspense boundary.
+ */
+
 "use client";
+import React, { Suspense } from "react";
 import { useSearchParams, useRouter } from "next/navigation";
 import { useFetch } from "../../hooks/useFetch";
 import { SearchResponse } from "../../types";
@@ -43,4 +52,10 @@ const ItemsPage = () => {
   );
 };
 
-export default ItemsPage;
+const ItemsPageWithSuspense = () => (
+  <Suspense fallback={<Loading />}>
+    <ItemsPage />
+  </Suspense>
+);
+
+export default ItemsPageWithSuspense;
