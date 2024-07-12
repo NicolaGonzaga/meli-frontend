@@ -9,10 +9,6 @@ Este repositório contém a solução para o desafio técnico proposto para a va
   - HTML5
   - React com Next.js
   - CSS
-  
-- **Servidor:**
-  - Node.js >= 14
-  - Express
 
 ## Estrutura do Projeto
 
