@@ -1,5 +1,5 @@
 
-# Desafio Técnico - Frontend para Mercado Livre / Mercado Pago
+# Desafio Técnico - Mercado Pago
 
 Este repositório contém a solução para o desafio técnico proposto para a vaga de frontend no Mercado Livre / Mercado Pago. A seguir, são detalhados os requisitos, a estrutura do projeto e instruções para execução e desenvolvimento.
 
